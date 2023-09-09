@@ -1,3 +1,4 @@
+import 'package:voice_ai_assistant_nicolas_baron/pallete.dart';
 import 'home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -10,10 +11,16 @@ class MyApp extends StatelessWidget   {
 
    @override
   Widget build(BuildContext context) {
-     return const MaterialApp(
+     return MaterialApp(
        debugShowCheckedModeBanner: false,
-       title: 'Flutter Demo',
-       home: HomePage(),
+       title: 'Voice Assistant',
+       theme: ThemeData.light(useMaterial3: true).copyWith(
+         scaffoldBackgroundColor: Pallete.whiteColor,
+         appBarTheme: const AppBarTheme(
+           backgroundColor: Pallete.whiteColor,
+         )
+       ),
+       home: const HomePage(),
      );
    }
 }
